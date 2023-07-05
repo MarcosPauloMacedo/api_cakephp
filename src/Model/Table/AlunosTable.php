@@ -88,4 +88,10 @@ class AlunosTable extends Table
 
         return $validator;
     }
+
+    public function getAlunosBasedStatus($status)
+    {
+        return $this->find('all')
+        ->where(['status' => $status]);
+    }
 }

@@ -102,4 +102,11 @@ class AlunosController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function alunosInactive()
+    {
+        $alunosInactive = $this->Alunos->getAlunosBasedStatus(0);
+        
+        $this->set(compact('alunosInactive'));
+    }
 }
