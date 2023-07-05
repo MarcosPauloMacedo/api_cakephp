@@ -94,4 +94,10 @@ class AlunosTable extends Table
         return $this->find('all')
         ->where(['status' => $status]);
     }
+
+    public function getAlunosBasedCurso($id)
+    {
+        return $this->find('all')
+        ->where(['idCurso' => $id]);
+    }
 }

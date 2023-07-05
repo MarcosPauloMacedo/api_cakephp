@@ -105,8 +105,22 @@ class FuncionariosController extends AppController
 
     public function funcionariosInactive()
     {
-        $funcionariosInactive = $this->Funcionarios->getFuncionariosBasedStatus(statusENUM::ATIVO);
+        $funcionariosInactive = $this->Funcionarios->getFuncionariosBasedStatus(statusENUM::INATIVO);
 
         $this->set(compact('funcionariosInactive'));
+    }
+
+    public function funcionariosActive()
+    {
+        $funcionariosActive = $this->Funcionarios->getFuncionariosBasedStatus(statusENUM::ATIVO);
+
+        $this->set(compact('funcionariosActive'));
+    }
+
+    public function funcionariosAndEnderecos()
+    {
+        $funcionariosAndEnderecos = $this->Funcionarios->getFuncionariosAndEnderecos();
+
+        $this->set(compact('funcionariosAndEnderecos'));
     }
 }

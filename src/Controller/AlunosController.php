@@ -116,4 +116,11 @@ class AlunosController extends AppController
 
         $this->set(compact('alunosActive'));
     }
+
+    public function alunosInCurso($id = null)
+    {
+        $alunosInCurso = $this->Alunos->getAlunosBasedCurso($id);
+
+        $this->set(compact('alunosInCurso'));
+    }
 }

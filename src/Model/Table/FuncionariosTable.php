@@ -40,6 +40,11 @@ class FuncionariosTable extends Table
         $this->setTable('funcionarios');
         $this->setDisplayField(['id']);
         $this->setPrimaryKey(['id']);
+
+        $this->belongsTo('enderecos', [
+            'foreignKey' => 'idEndereco',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**
@@ -86,4 +91,12 @@ class FuncionariosTable extends Table
         return $this->find('all')
         ->where(['status' => $status]);
     }
+
+    public function getFuncionariosAndEnderecos()
+    {
+        return $this->find('all')
+        ->contain('enderecos');
+    }
+
+    
 }

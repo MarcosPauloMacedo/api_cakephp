@@ -102,4 +102,11 @@ class CursosController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function coursesSubjects($id = null)
+    {
+        $coursesSubjects = $this->fetchTable('disciplinas')->getDisciplinasbasedCurso($id);
+
+        $this->set(compact('coursesSubjects'));
+    }
 }

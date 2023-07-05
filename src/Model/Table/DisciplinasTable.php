@@ -63,4 +63,16 @@ class DisciplinasTable extends Table
 
         return $validator;
     }
+
+    public function getDisciplinasbasedCurso($id)
+    {
+        return $this->find('all')
+        ->where(['idCurso' => $id]);
+    }
+
+    public function getDisciplinasBasedIdProfessor($id)
+    {
+        return $this->find('all')
+        ->where(['idProfessor' => $id]);
+    }
 }

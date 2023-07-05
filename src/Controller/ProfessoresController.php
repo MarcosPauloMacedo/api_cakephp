@@ -102,4 +102,12 @@ class ProfessoresController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function teacherSubjects($id)
+    {
+        $teacherSubjects = $this->fetchTable('disciplinas')
+        ->getDisciplinasBasedIdProfessor($id);
+
+        $this->set(compact('teacherSubjects'));
+    }
 }
