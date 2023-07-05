@@ -45,7 +45,7 @@ class CursosController extends AppController
      * @return \Cake\Http\Response|null|void Redirects on successful add, renders view otherwise.
      */
     public function add()
-    {
+    {   
         $curso = $this->Cursos->newEmptyEntity();
         if ($this->request->is('post')) {
             $curso = $this->Cursos->patchEntity($curso, $this->request->getData());

@@ -18,6 +18,7 @@
                 <legend><?= __('Add Curso') ?></legend>
                 <?php
                     echo $this->Form->control('nome');
+                    echo $this->Form->control('periodo');
                     echo $this->Form->control('valor_mensalidade');
                 ?>
             </fieldset>
