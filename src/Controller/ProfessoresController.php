@@ -36,7 +36,7 @@ class ProfessoresController extends AppController
             'contain' => [],
         ]);
 
-        $this->set(compact('professore'));
+        $this->set(compact('professor'));
     }
 
     /**
@@ -56,7 +56,7 @@ class ProfessoresController extends AppController
             }
             $this->Flash->error(__('The professore could not be saved. Please, try again.'));
         }
-        $this->set(compact('professore'));
+        $this->set(compact('professor'));
     }
 
     /**
@@ -80,7 +80,7 @@ class ProfessoresController extends AppController
             }
             $this->Flash->error(__('The professore could not be saved. Please, try again.'));
         }
-        $this->set(compact('professore'));
+        $this->set(compact('professor'));
     }
 
     /**
