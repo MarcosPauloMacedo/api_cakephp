@@ -1,2 +1,2 @@
 <?php
-echo json_encode(compact('professores'));
+echo json_encode($professores, JSON_UNESCAPED_UNICODE);

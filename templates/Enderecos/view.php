@@ -1,2 +1,2 @@
 <?php
-echo json_encode(compact('endereco'));
+echo json_encode($endereco, JSON_UNESCAPED_UNICODE);

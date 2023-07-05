@@ -105,8 +105,15 @@ class AlunosController extends AppController
 
     public function alunosInactive()
     {
-        $alunosInactive = $this->Alunos->getAlunosBasedStatus(0);
+        $alunosInactive = $this->Alunos->getAlunosBasedStatus(statusENUM::INATIVO);
         
         $this->set(compact('alunosInactive'));
+    }
+
+    public function alunosActive()
+    {
+        $alunosActive = $this->Alunos->getAlunosBasedStatus(statusENUM::ATIVO);
+
+        $this->set(compact('alunosActive'));
     }
 }

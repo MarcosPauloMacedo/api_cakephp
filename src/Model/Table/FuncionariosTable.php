@@ -80,4 +80,10 @@ class FuncionariosTable extends Table
 
         return $validator;
     }
+
+    public function getFuncionariosBasedStatus($status)
+    {
+        return $this->find('all')
+        ->where(['status' => $status]);
+    }
 }

@@ -102,4 +102,11 @@ class FuncionariosController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function funcionariosInactive()
+    {
+        $funcionariosInactive = $this->Funcionarios->getFuncionariosBasedStatus(statusENUM::ATIVO);
+
+        $this->set(compact('funcionariosInactive'));
+    }
 }

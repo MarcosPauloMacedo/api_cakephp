@@ -1,2 +1,2 @@
 <?php
-echo json_encode(compact('desciplina'));
+echo json_encode($disciplina, JSON_UNESCAPED_UNICODE);

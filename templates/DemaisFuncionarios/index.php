@@ -1,2 +1,2 @@
 <?php
-echo json_encode(compact('demaisFuncionarios'));
+echo json_encode($demaisFuncionarios, JSON_UNESCAPED_UNICODE);
