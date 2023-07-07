@@ -65,7 +65,7 @@ class AppController extends Controller
         // Habilitar a configuração CORS para todos os métodos do controlador
         $this->response = $this->response->cors($this->request)
             ->allowOrigin(['*'])
-            ->allowMethods(['GET', 'POST'])
+            ->allowMethods(['GET', 'POST', 'DELETE'])
             ->allowCredentials()
             ->exposeHeaders(['Link'])
             ->maxAge(300)
