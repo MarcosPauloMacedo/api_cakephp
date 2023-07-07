@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\View\JsonView;
+
 /**
  * Alunos Controller
  *
@@ -19,8 +21,9 @@ class AlunosController extends AppController
     public function index()
     {
         $alunos = $this->paginate($this->Alunos);
-
+        
         $this->set(compact('alunos'));
+        $this->viewBuilder()->setOption('serialize','alunos');
     }
 
     /**
@@ -37,6 +40,7 @@ class AlunosController extends AppController
         ]);
         
         $this->set(compact('aluno'));
+        $this->viewBuilder()->setOption('serialize','aluno');
     }
 
     /**
@@ -103,11 +107,17 @@ class AlunosController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
+    public function viewClasses(): array
+    {
+        return [JsonView::class];
+    }
+
     public function alunosInactive()
     {
         $alunosInactive = $this->Alunos->getAlunosBasedStatus(statusENUM::INATIVO);
         
         $this->set(compact('alunosInactive'));
+        $this->viewBuilder()->setOption('serialize','alunosInactive');  
     }
 
     public function alunosActive()
@@ -115,6 +125,7 @@ class AlunosController extends AppController
         $alunosActive = $this->Alunos->getAlunosBasedStatus(statusENUM::ATIVO);
 
         $this->set(compact('alunosActive'));
+        $this->viewBuilder()->setOption('serialize','alunosActive');  
     }
 
     public function alunosInCurso($id = null)
@@ -122,5 +133,6 @@ class AlunosController extends AppController
         $alunosInCurso = $this->Alunos->getAlunosBasedCurso($id);
 
         $this->set(compact('alunosInCurso'));
+        $this->viewBuilder()->setOption('serialize','alunosInCurso');  
     }
 }
