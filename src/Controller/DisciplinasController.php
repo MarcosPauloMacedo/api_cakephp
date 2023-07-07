@@ -21,6 +21,7 @@ class DisciplinasController extends AppController
         $disciplinas = $this->paginate($this->Disciplinas);
 
         $this->set(compact('disciplinas'));
+        $this->viewBuilder()->setOption('serialize','disciplinas');  
     }
 
     /**
@@ -37,6 +38,7 @@ class DisciplinasController extends AppController
         ]);
 
         $this->set(compact('disciplina'));
+        $this->viewBuilder()->setOption('serialize','disciplina');  
     }
 
     /**

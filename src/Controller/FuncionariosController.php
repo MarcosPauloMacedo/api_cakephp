@@ -21,6 +21,7 @@ class FuncionariosController extends AppController
         $funcionarios = $this->paginate($this->Funcionarios);
 
         $this->set(compact('funcionarios'));
+        $this->viewBuilder()->setOption('serialize','funcionarios');  
     }
 
     /**
@@ -37,6 +38,7 @@ class FuncionariosController extends AppController
         ]);
 
         $this->set(compact('funcionario'));
+        $this->viewBuilder()->setOption('serialize','funcionario');  
     }
 
     /**
@@ -108,6 +110,7 @@ class FuncionariosController extends AppController
         $funcionariosInactive = $this->Funcionarios->getFuncionariosBasedStatus(statusENUM::INATIVO);
 
         $this->set(compact('funcionariosInactive'));
+        $this->viewBuilder()->setOption('serialize','funcionariosInactive');  
     }
 
     public function funcionariosActive()
@@ -115,6 +118,7 @@ class FuncionariosController extends AppController
         $funcionariosActive = $this->Funcionarios->getFuncionariosBasedStatus(statusENUM::ATIVO);
 
         $this->set(compact('funcionariosActive'));
+        $this->viewBuilder()->setOption('serialize','funcionariosInactive');  
     }
 
     public function funcionariosAndEnderecos()
@@ -122,5 +126,6 @@ class FuncionariosController extends AppController
         $funcionariosAndEnderecos = $this->Funcionarios->getFuncionariosAndEnderecos();
 
         $this->set(compact('funcionariosAndEnderecos'));
+        $this->viewBuilder()->setOption('serialize','funcionariosAndEnderecos');  
     }
 }

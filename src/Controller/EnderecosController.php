@@ -21,6 +21,7 @@ class EnderecosController extends AppController
         $enderecos = $this->paginate($this->Enderecos);
 
         $this->set(compact('enderecos'));
+        $this->viewBuilder()->setOption('serialize','enderecos');  
     }
 
     /**
@@ -37,6 +38,7 @@ class EnderecosController extends AppController
         ]);
 
         $this->set(compact('endereco'));
+        $this->viewBuilder()->setOption('serialize','endereco');  
     }
 
     /**

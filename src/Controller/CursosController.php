@@ -21,6 +21,7 @@ class CursosController extends AppController
         $cursos = $this->paginate($this->Cursos);
 
         $this->set(compact('cursos'));
+        $this->viewBuilder()->setOption('serialize','cursos');  
     }
 
     /**
@@ -37,6 +38,7 @@ class CursosController extends AppController
         ]);
 
         $this->set(compact('curso'));
+        $this->viewBuilder()->setOption('serialize','curso');  
     }
 
     /**

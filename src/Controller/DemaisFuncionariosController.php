@@ -21,6 +21,7 @@ class DemaisFuncionariosController extends AppController
         $demaisFuncionarios = $this->paginate($this->DemaisFuncionarios);
 
         $this->set(compact('demaisFuncionarios'));
+        $this->viewBuilder()->setOption('serialize','demaisFuncionarios');  
     }
 
     /**
@@ -37,6 +38,7 @@ class DemaisFuncionariosController extends AppController
         ]);
 
         $this->set(compact('demaisFuncionario'));
+        $this->viewBuilder()->setOption('serialize','demaisFuncionario');  
     }
 
     /**

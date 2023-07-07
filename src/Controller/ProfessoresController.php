@@ -21,6 +21,7 @@ class ProfessoresController extends AppController
         $professores = $this->paginate($this->Professores);
 
         $this->set(compact('professores'));
+        $this->viewBuilder()->setOption('serialize','professores');  
     }
 
     /**
@@ -32,11 +33,12 @@ class ProfessoresController extends AppController
      */
     public function view($id = null)
     {
-        $professore = $this->Professores->get($id, [
+        $professor = $this->Professores->get($id, [
             'contain' => [],
         ]);
 
         $this->set(compact('professor'));
+        $this->viewBuilder()->setOption('serialize','professor');  
     }
 
     /**
