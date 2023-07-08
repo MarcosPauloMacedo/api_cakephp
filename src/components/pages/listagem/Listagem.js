@@ -2,6 +2,7 @@ import './listagem.css'
 import Inicial from '../../menus/inicial'
 import axios from "axios"
 import { useEffect, useState } from 'react'
+import { Tabela } from '../../tabelas/Tabela'
 
 
 export const Listagem = ()=>{
@@ -11,7 +12,6 @@ export const Listagem = ()=>{
     useEffect(() => {
         axios.get("http://localhost:80/api_cakephp/alunos")
           .then(response => {
-            console.log(response.data)
             setAlunos(response.data)
           })
           .catch(error => {
@@ -28,11 +28,7 @@ export const Listagem = ()=>{
             <div className='dashboard'>
                 <section className='dashboard-menu'></section>
                 <section className='dashboard-listagem'>
-                  {
-                    alunos.map(item =>{
-                        return <h3 key={item.id}>{item.nome}</h3>
-                    })
-                  }
+                  <Tabela dados = {alunos} />
                 </section>
             </div>
         </div>
