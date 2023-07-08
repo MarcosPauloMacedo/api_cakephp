@@ -1,4 +1,30 @@
 .tabela{
-    width: 50%;
+    width: 100%;
+    margin-top: 64px;
+    border-top: 1px solid rgb(187, 187, 187);
+    padding: 20px;
 }
+
+.tabela table{
+    width: 100%;
+}
+
+.tabela th{
+    text-align: left;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-bottom: 10px solid transparent;
+}
+
+.tabela td{
+    padding-bottom: 5px;
+}
+
+.tabela td a {
+    margin-right: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+}
+
+
 

@@ -1,0 +1,23 @@
+.menu_lateral{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu_lateral h2{
+    color: #fff;
+    padding-bottom:15px;
+    border-bottom: 1px solid #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu_lateral a {
+    color: rgb(160, 159, 159);
+    text-decoration: none;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu_lateral :hover{
+    color: #fff;
+}

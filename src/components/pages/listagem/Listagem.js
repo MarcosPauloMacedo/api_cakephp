@@ -1,5 +1,4 @@
 import './listagem.css'
-import Inicial from '../../menus/inicial'
 import axios from "axios"
 import { useEffect, useState } from 'react'
 import { Tabela } from '../../tabelas/Tabela'
@@ -20,17 +19,8 @@ export const Listagem = ()=>{
       }, []);      
 
     return(
-        <div className='listagem'>
-            <div className='menu'>
-                <Inicial />
-            </div>
-                
-            <div className='dashboard'>
-                <section className='dashboard-menu'></section>
-                <section className='dashboard-listagem'>
-                  <Tabela dados = {alunos} />
-                </section>
-            </div>
+        <div className='listagem'> 
+          <Tabela dados = {alunos} />
         </div>
     )
 }

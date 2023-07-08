@@ -8,16 +8,15 @@ export const Tabela = (props)=>{
     }
 
     return(
-        <>
-            <h2>Alunos do sistema</h2>
-            <table className='tabela'>
+        <div className='tabela'>
+            <table>
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Idade</th>
                         <th>Email</th>
                         <th>Telefone</th>
                         <th>Status</th>
+                        <th>Idade</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,14 +24,19 @@ export const Tabela = (props)=>{
                         return(
                         <tr>
                             <td>{item.nome}</td>
-                            <td>{item.idade}</td>
                             <td>{item.email}</td>    
                             <td>{item.telefone}</td>
                             <td>{status(item.status)}</td>
+                            <td>{item.idade} anos</td>
+                            <td>
+                                <a href='#'>View</a>
+                                <a href='#'>Edit</a>
+                                <a href='#'>Delete</a>
+                            </td>
                         </tr>)
                     })}
                 </tbody>
             </table>
-        </>
+        </div>
     )
 }

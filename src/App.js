@@ -1,8 +1,10 @@
-import Listagem from "./components/pages/listagem"
+import Principal from "./components/pages/principal"
 
 function App(){
   return(
-    <Listagem />
+    <>
+      <Principal />
+    </>
   )
 }
 

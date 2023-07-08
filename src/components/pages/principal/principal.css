@@ -1,0 +1,12 @@
+.page_principal{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    height: 94vh;
+    width: 100vw;
+}
+
+.page_principal .menu_lateral{
+    background: #343A40;
+    padding: 0 10px;
+}
+
