@@ -40,5 +40,22 @@ class ProfessoresTable extends Table
         $this->setTable('professores');
         $this->setDisplayField(['id']);
         $this->setPrimaryKey(['id']);
+
+        $this->belongsTo('funcionarios', [
+            'foreignKey' => 'idFuncionario',
+            'joinType' => 'INNER'
+        ]);
+    }
+
+    public function getProfessores(){
+        return $this->find('all')
+        ->contain('funcionarios')
+        ->select([
+            'id',
+            'titulacao',
+            'funcionarios.nome',
+            'funcionarios.telefone',
+            'funcionarios.status'
+        ]);
     }
 }

@@ -3,6 +3,9 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+
+use Cake\View\JsonView;
+
 /**
  * Professores Controller
  *
@@ -18,7 +21,7 @@ class ProfessoresController extends AppController
      */
     public function index()
     {
-        $professores = $this->paginate($this->Professores);
+        $professores = $this->paginate($this->Professores->getProfessores());
 
         $this->set(compact('professores'));
         $this->viewBuilder()->setOption('serialize','professores');  
@@ -103,6 +106,11 @@ class ProfessoresController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function viewClasses(): array
+    {
+        return [JsonView::class];
     }
 
     public function teacherSubjects($id)
