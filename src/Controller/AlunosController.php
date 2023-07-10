@@ -20,7 +20,7 @@ class AlunosController extends AppController
      */
     public function index()
     {
-        $alunos = $this->paginate($this->Alunos);
+        $alunos = $this->paginate($this->Alunos->getAlunos());
         
         $this->set(compact('alunos'));
         $this->viewBuilder()->setOption('serialize','alunos');

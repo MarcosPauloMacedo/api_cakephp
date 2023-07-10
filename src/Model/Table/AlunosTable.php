@@ -40,6 +40,16 @@ class AlunosTable extends Table
         $this->setTable('alunos');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
+        
+        $this->belongsTo('cursos', [
+            'foreignKey' => 'idCurso',
+            'joinType' => 'INNER'
+        ]);
+
+        $this->belongsTo('enderecos', [
+            'foreignKey' => 'idEndereco',
+            'joinType' => 'INNER'
+        ]);
     }
 
     /**
@@ -99,5 +109,17 @@ class AlunosTable extends Table
     {
         return $this->find('all')
         ->where(['idCurso' => $id]);
+    }
+
+    public function getAlunosAndAssociatedData()
+    {
+        return $this->find('all')
+        ->contain(['cursos','enderecos']);
+    }
+
+    public function getAlunos()
+    {
+        return $this->find('all')
+        ->select(['nome','idade','email','telefone','status']);
     }
 }
