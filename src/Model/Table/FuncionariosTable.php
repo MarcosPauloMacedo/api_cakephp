@@ -98,5 +98,10 @@ class FuncionariosTable extends Table
         ->contain('enderecos');
     }
 
+    public function getFunctionarios()
+    {
+        return $this->find('all')
+        ->select(['id','nome','telefone','ctps','cpf','status']);
+    }
     
 }

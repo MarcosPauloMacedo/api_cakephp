@@ -20,7 +20,7 @@ class FuncionariosController extends AppController
      */
     public function index()
     {
-        $funcionarios = $this->paginate($this->Funcionarios);
+        $funcionarios = $this->paginate($this->Funcionarios->getFunctionarios());
 
         $this->set(compact('funcionarios'));
         $this->viewBuilder()->setOption('serialize','funcionarios');  
