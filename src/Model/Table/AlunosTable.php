@@ -120,6 +120,6 @@ class AlunosTable extends Table
     public function getAlunos()
     {
         return $this->find('all')
-        ->select(['nome','idade','email','telefone','status']);
+        ->select(['id','nome','idade','email','telefone','status']);
     }
 }

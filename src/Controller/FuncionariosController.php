@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\View\JsonView;
+
 /**
  * Funcionarios Controller
  *
@@ -103,6 +105,11 @@ class FuncionariosController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function viewClasses(): array
+    {
+        return [JsonView::class];
     }
 
     public function funcionariosInactive()
