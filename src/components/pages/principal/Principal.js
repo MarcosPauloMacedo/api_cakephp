@@ -3,6 +3,7 @@ import Menu_lateral from '../../menus/Menu_lateral'
 import Alunos from '../listagem/alunos'
 import Funcionarios from '../listagem/funcionarios'
 import Cursos from '../listagem/cursos'
+import Professores from '../listagem/professores'
 
 export const Principal = () => {
     return(
@@ -12,7 +13,7 @@ export const Principal = () => {
                     <Menu_lateral />    
                 </div>
                 <div className='conteudo'>
-                    <Cursos />
+                    <Professores />
                 </div>
             </main>
         </div>
