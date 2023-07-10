@@ -31,6 +31,9 @@ export const Tabela = (props)=>{
                         {indice.map((y) => (
                         <td key={y.id}>{n[y]}</td>
                         ))}
+                        <a href='#'>view</a>
+                        <a href='#'>edit</a>
+                        <a href='#'>delete</a>
                     </tr>
                     ))}
                 </tbody>

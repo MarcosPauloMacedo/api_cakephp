@@ -20,7 +20,7 @@
     padding-bottom: 5px;
 }
 
-.tabela td a {
+.tabela tr a {
     margin-right: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: none;
