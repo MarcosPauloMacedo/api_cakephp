@@ -15,11 +15,18 @@ export const Funcionarios = () => {
           .catch(error => {
             console.error(error);
           });
-      }, []);      
+      }, []); 
+
+    const dadosFuncionarios = funcionarios.map(item => {
+        return {
+          ...item,
+          status: item.status ? 'ativo' : 'inativo'
+        };
+      });     
 
     return(
         <div className='listagem'> 
-          <Tabela dados = {funcionarios} />
+          <Tabela dados = {dadosFuncionarios} />
         </div>
     )
 }

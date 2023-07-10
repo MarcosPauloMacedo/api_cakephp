@@ -19,22 +19,22 @@ export const Tabela = (props)=>{
             <table>
                 <thead>
                     <tr>
-                    {indice.map((item) => (
-                        <th key={item}>{item}</th>
-                    ))}
+                        {indice.map((item) => (
+                            <th key={item}>{item}</th>
+                        ))}
                     </tr>
                 </thead>
                 
                 <tbody>
                     {props.dados.map((n, index) => (
-                    <tr key={index}>
-                        {indice.map((y) => (
-                        <td key={y.id}>{n[y]}</td>
-                        ))}
-                        <a href='#'>view</a>
-                        <a href='#'>edit</a>
-                        <a href='#'>delete</a>
-                    </tr>
+                        <tr key={index}>
+                            {indice.map((y) => (
+                                <td key={y.id}>{n[y]}</td>
+                            ))}
+                            <a href='#'>view</a>
+                            <a href='#'>edit</a>
+                            <a href='#'>delete</a>
+                        </tr>
                     ))}
                 </tbody>
             </table>
