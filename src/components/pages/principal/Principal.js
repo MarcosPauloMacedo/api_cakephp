@@ -2,6 +2,7 @@ import './principal.css'
 import Menu_lateral from '../../menus/Menu_lateral'
 import Alunos from '../listagem/alunos'
 import Funcionarios from '../listagem/funcionarios'
+import Cursos from '../listagem/cursos'
 
 export const Principal = () => {
     return(
@@ -11,7 +12,7 @@ export const Principal = () => {
                     <Menu_lateral />    
                 </div>
                 <div className='conteudo'>
-                    <Funcionarios />
+                    <Cursos />
                 </div>
             </main>
         </div>
