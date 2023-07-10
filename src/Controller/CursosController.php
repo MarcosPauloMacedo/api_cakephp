@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\View\JsonView;
+
 /**
  * Cursos Controller
  *
@@ -103,6 +105,11 @@ class CursosController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+
+    public function viewClasses(): array
+    {
+        return [JsonView::class];
     }
 
     public function coursesSubjects($id = null)
