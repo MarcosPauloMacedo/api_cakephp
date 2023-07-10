@@ -1,10 +1,9 @@
-import './listagem.css'
+import './alunos.css'
 import axios from "axios"
 import { useEffect, useState } from 'react'
-import { Tabela } from '../../tabelas/Tabela'
+import { Tabela } from '../../../tabelas/Tabela'
 
-
-export const Listagem = ()=>{
+export const Alunos = ()=>{
 
     const [alunos,setAlunos] = useState([]);
 

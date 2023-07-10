@@ -1,6 +1,6 @@
 import './principal.css'
 import Menu_lateral from '../../menus/Menu_lateral'
-import Listagem from '../listagem'
+import Alunos from '../listagem/alunos'
 
 export const Principal = () => {
     return(
@@ -10,7 +10,7 @@ export const Principal = () => {
                     <Menu_lateral />    
                 </div>
                 <div className='conteudo'>
-                    <Listagem />
+                    <Alunos />
                 </div>
             </main>
         </div>
